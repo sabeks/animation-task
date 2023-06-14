@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.sky {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../images/sky.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.road {
+  background-image: url(../images/road.jpg);
+  width: 100%;
+  height: 200px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transition: all;
+  transition-duration: 5s;
+  animation-timing-function: ease;
+}
+.car {
+  background-image: url(../images/car2.png);
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  animation-name: car;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: reverse;
+  bottom: 100px;
+  left: 0px;
+}
+.bmw {
+  background-image: url(../images/car.png);
+  width: 200px;
+  height: 200px;
+  float: right;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  animation-name: bmw;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  bottom: 50px;
+  right: 0px;
+}
+
+@keyframes car {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 100%;
+  }
+}
+@keyframes bmw {
+  from {
+    right: 0%;
+  }
+  to {
+    right: 100%;
+  }
+}
